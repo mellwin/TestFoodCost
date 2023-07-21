@@ -1,4 +1,6 @@
-﻿namespace TestFoodCost
+﻿using System;
+
+namespace TestFoodCost
 {
     public class Calculator
     {
@@ -6,12 +8,12 @@
         {
             double total = 0;
 
-            foreach (var ingredient in recipe.RecipeProducts)
+            foreach (var ingredient in recipe.Products)
             {
-                total += ingredient.ProductCost / ingredient.ProductVolume;
+                total += ingredient.Cost / ingredient.Volume;
             }
 
-            return total / recipe.RecipePortions;
+            return Math.Round(total / recipe.Portions, 2);
         }
     }
 }

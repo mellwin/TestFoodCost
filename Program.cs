@@ -4,7 +4,7 @@
     {
         static void Main(string[] args)
         {
-            StartConsole start = new StartConsole();
+            StartConsole start = new();
             start.StartProgram();
         }
     }
